@@ -21,14 +21,17 @@ async function getUserFromToken(request: NextRequest): Promise<string | null> {
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   try {
     const userId = await getUserFromToken(request)
     if (!userId) {
       return NextResponse.json({ error: "Unauthorized access" }, { status: 401 })
     }
 
-    const { id } = params
+    const { id } = await params
 
     if (!id) {
       return NextResponse.json({ error: "Note ID is required" }, { status: 400 })
@@ -49,14 +52,17 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
   }
 }
 
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   try {
     const userId = await getUserFromToken(request)
     if (!userId) {
       return NextResponse.json({ error: "Unauthorized access" }, { status: 401 })
     }
 
-    const { id } = params
+    const { id } = await params
     const { title, content } = await request.json()
 
     if (!id) {
