@@ -92,7 +92,3 @@ A modern, full-stack note-taking application built with Next.js, TypeScript, and
 - Efficient database queries
 - Minimal bundle size
 - Fast page loads
-
-## 📄 License
-
-MIT License - see LICENSE file for details
