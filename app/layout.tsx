@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   keywords: ["notes", "productivity", "authentication", "secure"],
   authors: [{ name: "HD Notes Team" }],
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 }
 
 export const viewport: Viewport = {
@@ -29,6 +34,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         {children}
         <Toaster />

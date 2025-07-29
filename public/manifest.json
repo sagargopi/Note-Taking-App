@@ -1,0 +1,16 @@
+{
+  "name": "HD Notes",
+  "short_name": "HD Notes",
+  "description": "A modern, secure note-taking application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+} 
