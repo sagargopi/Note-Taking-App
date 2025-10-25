@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "my-app-project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@auth/core": "^0.41.0",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "latest",
     "@radix-ui/react-alert-dialog": "latest",
@@ -50,6 +51,7 @@
     "lucide-react": "^0.454.0",
     "mongoose": "latest",
     "next": "15.2.4",
+    "next-auth": "^4.24.11",
     "next-themes": "latest",
     "nodemailer": "^7.0.5",
     "react": "^19",
